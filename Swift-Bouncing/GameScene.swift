@@ -9,14 +9,23 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+        self.addChild(self.createFloor())
+    }
+    
+    func createFloor() -> SKSpriteNode {
+        let floorColor = SKColor.brownColor()
+        let floorSize = CGSize(width: self.frame.size.width, height: 20)
+        let floor = SKSpriteNode(color:floorColor, size: floorSize)
         
-        self.addChild(myLabel)
+        floor.anchorPoint = CGPoint(x: 0,y: 0)
+        floor.name = "floor"
+        floor.physicsBody = SKPhysicsBody(edgeLoopFromRect: floor.frame)
+        floor.physicsBody.dynamic = false
+        
+        return floor
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
