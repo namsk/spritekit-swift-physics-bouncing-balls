@@ -16,9 +16,7 @@ class GameScene: SKScene {
     }
     
     func createFloor() -> SKSpriteNode {
-        let floorColor = SKColor.brownColor()
-        let floorSize = CGSize(width: self.frame.size.width, height: 20)
-        let floor = SKSpriteNode(color:floorColor, size: floorSize)
+        let floor = SKSpriteNode(color: SKColor.brownColor(), size: CGSize(width: self.frame.size.width, height: 20))
         
         floor.anchorPoint = CGPoint(x: 0,y: 0)
         floor.name = "floor"
