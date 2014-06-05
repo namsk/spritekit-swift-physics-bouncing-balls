@@ -53,4 +53,14 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
+    
+    override func didSimulatePhysics() {
+        let block: (SKNode!, CMutablePointer<ObjCBool>) -> Void  = { node, stop in
+            if node.position.y < 0 {
+                node.removeFromParent()
+            }
+        }
+        
+        enumerateChildNodesWithName("ball", usingBlock: block)
+    }
 }
