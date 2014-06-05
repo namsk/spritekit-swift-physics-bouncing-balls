@@ -26,23 +26,27 @@ class GameScene: SKScene {
         return floor
     }
     
+    func createBall(position: CGPoint) -> SKShapeNode {
+        let path = CGPathCreateWithEllipseInRect(CGRect(x: -20, y: -20, width: 40, height: 40), nil)
+        let ball = SKShapeNode(path: path)
+        
+        ball.position = position
+        ball.name = "ball"
+        
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: 20.0)
+        ball.physicsBody.dynamic = true
+        ball.physicsBody.restitution = 0.7
+        
+        return ball
+    }
+    
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
         
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+
+            self.addChild(self.createBall(location))
         }
     }
    
