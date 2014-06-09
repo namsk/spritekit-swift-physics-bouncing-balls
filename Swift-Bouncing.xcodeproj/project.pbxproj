@@ -417,6 +417,7 @@
 				9411C71B193FF50800DB2622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9411C71C193FF50800DB2622 /* Build configuration list for PBXNativeTarget "Swift-BouncingTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				9411C71E193FF50800DB2622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
