@@ -17,9 +17,9 @@ class GameScene: SKScene {
     }
     
     func createFloor() -> SKSpriteNode {
-        let floor = SKSpriteNode(color: SKColor.brownColor(), size: CGSize(width: self.frame.size.width, height: 20))
+        let floor = SKSpriteNode(color: SKColor.brownColor(), size: CGSizeMake(self.frame.size.width, 20))
 
-        floor.anchorPoint = CGPoint(x: 0,y: 0)
+        floor.anchorPoint = CGPointMake(0, 0)
         floor.name = "floor"
         floor.physicsBody = SKPhysicsBody(edgeLoopFromRect: floor.frame)
         floor.physicsBody.dynamic = false
