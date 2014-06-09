@@ -13,6 +13,7 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         self.addChild(self.createFloor())
+        physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
     }
     
     func createFloor() -> SKSpriteNode {
