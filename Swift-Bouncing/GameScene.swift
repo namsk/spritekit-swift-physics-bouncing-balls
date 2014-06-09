@@ -28,8 +28,8 @@ class GameScene: SKScene {
     }
     
     func createBall(position: CGPoint) -> SKShapeNode {
-        let path = CGPathCreateWithEllipseInRect(CGRect(x: -20, y: -20, width: 40, height: 40), nil)
-        let ball = SKShapeNode(path: path)
+        let ball = SKShapeNode(circleOfRadius:20)
+        let positionMark = SKShapeNode(circleOfRadius:6)
         
         ball.position = position
         ball.name = "ball"
@@ -37,6 +37,9 @@ class GameScene: SKScene {
         ball.physicsBody = SKPhysicsBody(circleOfRadius: 20.0)
         ball.physicsBody.dynamic = true
         ball.physicsBody.restitution = 0.7
+        
+        positionMark.position.y = -12
+        ball.addChild(positionMark)
         
         return ball
     }
