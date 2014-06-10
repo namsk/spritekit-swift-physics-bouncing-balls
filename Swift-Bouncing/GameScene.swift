@@ -49,8 +49,10 @@ class GameScene: SKScene {
         
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
-
-            self.addChild(self.createBall(location))
+            let floor = self.childNodeWithName("floor")
+            if !floor.containsPoint(location) {
+                self.addChild(self.createBall(location))
+            }
         }
     }
    
