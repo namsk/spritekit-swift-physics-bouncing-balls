@@ -28,8 +28,8 @@ class GameScene: SKScene {
     }
     
     func createBall(position: CGPoint) -> SKShapeNode {
-        let ball = SKShapeNode(circleOfRadius:20)
-        let positionMark = SKShapeNode(circleOfRadius:6)
+        let ball = SKShapeNode(circleOfRadius: 20.0)
+        let positionMark = SKShapeNode(circleOfRadius: 6.0)
         
         ball.position = position
         ball.name = "ball"
