@@ -10,3 +10,8 @@ A demo using physics system of SpriteKit with Swift.
 
 * Xcode 6 Beta
 * iOS 8 SDK Beta
+
+## History
+
+2014-06-18 Tested on Xcode 6 Beta 2 and iOS 8 Beta 2 
+2014-06-05 First Created
