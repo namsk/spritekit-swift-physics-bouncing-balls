@@ -13,5 +13,5 @@ A demo using physics system of SpriteKit with Swift.
 
 ## History
 
-2014-06-18 Tested on Xcode 6 Beta 2 and iOS 8 Beta 2 
-2014-06-05 First Created
+* 2014-06-18 Tested on Xcode 6 Beta 2 and iOS 8 Beta 2 
+* 2014-06-05 First Created
