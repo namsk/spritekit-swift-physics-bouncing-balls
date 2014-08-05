@@ -61,12 +61,10 @@ class GameScene: SKScene {
     }
     
     override func didSimulatePhysics() {
-        let block: (SKNode!, UnsafeMutablePointer<ObjCBool>) -> Void  = { node, stop in
+        self.enumerateChildNodesWithName("ball", usingBlock: { (node: SKNode!, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
             if node.position.y < 0 {
                 node.removeFromParent()
             }
-        }
-        
-        self.enumerateChildNodesWithName("ball", usingBlock: block)
+        })
     }
 }
