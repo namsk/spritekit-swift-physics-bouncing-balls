@@ -31,6 +31,7 @@ class GameScene: SKScene {
         let ball = SKShapeNode(circleOfRadius: 20.0)
         let positionMark = SKShapeNode(circleOfRadius: 6.0)
         
+        ball.fillColor = SKColor.whiteColor()
         ball.position = position
         ball.name = "ball"
         
@@ -38,6 +39,7 @@ class GameScene: SKScene {
         ball.physicsBody.dynamic = true
         ball.physicsBody.restitution = 0.7
         
+        positionMark.fillColor = SKColor.blackColor()
         positionMark.position.y = -12
         ball.addChild(positionMark)
         
