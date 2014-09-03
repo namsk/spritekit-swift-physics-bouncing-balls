@@ -22,7 +22,7 @@ class GameScene: SKScene {
         floor.anchorPoint = CGPointMake(0, 0)
         floor.name = "floor"
         floor.physicsBody = SKPhysicsBody(edgeLoopFromRect: floor.frame)
-        floor.physicsBody.dynamic = false
+        floor.physicsBody?.dynamic = false
         
         return floor
     }
@@ -36,8 +36,8 @@ class GameScene: SKScene {
         ball.name = "ball"
         
         ball.physicsBody = SKPhysicsBody(circleOfRadius: 20.0)
-        ball.physicsBody.dynamic = true
-        ball.physicsBody.restitution = 0.7
+        ball.physicsBody?.dynamic = true
+        ball.physicsBody?.restitution = 0.7
         
         positionMark.fillColor = SKColor.blackColor()
         positionMark.position.y = -12
@@ -50,9 +50,9 @@ class GameScene: SKScene {
         /* Called when a touch begins */
         
         for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
-            let floor = self.childNodeWithName("floor")
-            if !floor.containsPoint(location) {
+            let location:CGPoint = touch.locationInNode(self)
+            let floor:SKNode? = self.childNodeWithName("floor")
+            if floor?.containsPoint(location) != nil {
                 self.addChild(self.createBall(location))
             }
         }
