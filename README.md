@@ -8,8 +8,8 @@ A demo using physics system of SpriteKit with Swift.
 
 ## Requirements:
 
-* Xcode 6 Beta
-* iOS 8 SDK Beta
+* Xcode 6
+* iOS 8 SDK
 
 ## History
 
