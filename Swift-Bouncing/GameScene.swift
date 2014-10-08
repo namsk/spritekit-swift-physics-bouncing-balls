@@ -31,7 +31,7 @@ class GameScene: SKScene {
         let ball = SKShapeNode(circleOfRadius: 20.0)
         let positionMark = SKShapeNode(circleOfRadius: 6.0)
         
-        ball.fillColor = SKColor.whiteColor()
+        ball.fillColor = SKColor(red: CGFloat(arc4random() % 256) / 256.0, green: CGFloat(arc4random() % 256) / 256.0, blue: CGFloat(arc4random() % 256) / 256.0, alpha: 1.0)
         ball.position = position
         ball.name = "ball"
         
