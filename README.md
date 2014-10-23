@@ -13,6 +13,7 @@ A demo using physics system of SpriteKit with Swift.
 
 ## History
 
+* 2014-10-23 Tested and Fixed error on Xcode 6 and iOS 8.1 SDK
 * 2014-09-10 Tested on Xcode 6 GM Seed and iOS 8 GM Seed
 * 2014-09-03 Tested and Fixed error on Xcode 6 beta 7
 * 2014-08-19 Tested and Fixed error on Xcode 6 beta 6
