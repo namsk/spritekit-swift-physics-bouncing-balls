@@ -45,6 +45,7 @@ class GameScene: SKScene {
         
         return ball
     }
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch: AnyObject in touches {
             let location:CGPoint = touch.locationInNode(self)
@@ -54,17 +55,6 @@ class GameScene: SKScene {
             }
         }
     }
-//    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-//        /* Called when a touch begins */
-//        
-//        for touch: AnyObject in touches {
-//            let location:CGPoint = touch.locationInNode(self)
-//            let floor:SKNode? = self.childNodeWithName("floor")
-//            if floor?.containsPoint(location) != nil {
-//                self.addChild(self.createBall(location))
-//            }
-//        }
-//    }
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
