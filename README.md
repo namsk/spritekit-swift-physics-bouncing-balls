@@ -8,11 +8,12 @@ A demo using physics system of SpriteKit with Swift.
 
 ## Requirements:
 
-* Xcode 6.3.1
+* Xcode 6.3 or higher
 * iOS 8.1 SDK
 
 ## History
 
+* 2015-05-21 Tested on Xcode 6.3.2
 * 2015-05-14 Tested and Fixed error on Xcode 6.3.1
 * 2014-10-23 Tested and Fixed error on Xcode 6 and iOS 8.1 SDK
 * 2014-09-10 Tested on Xcode 6 GM Seed and iOS 8 GM Seed
